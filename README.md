@@ -1,8 +1,8 @@
-RAGPipeline – Retrieval-Augmented Generation with LangChain & HuggingFace
-📌 Overview
+**RAGPipeline – Retrieval-Augmented Generation with LangChain & HuggingFace
+📌 Overview**
 
-This project implements a Retrieval-Augmented Generation (RAG) pipeline in Python.
-It allows you to:
+**This project implements a Retrieval-Augmented Generation (RAG) pipeline in Python.
+It allows you to:**
 
 Load and process multiple documents.
 
@@ -18,7 +18,7 @@ Use a HuggingFace text generation model to answer questions based on the retriev
 
 This setup is useful for building chatbots, QA systems, or knowledge assistants that can reason over large collections of text.
 
-⚙️ Features
+**⚙️ Features**
 
 Supports multiple text documents (list of paths).
 
@@ -32,14 +32,14 @@ Integration with HuggingFace LLMs for question answering.
 
 Modular OOP design (easy to extend for new retrievers/models).
 
-🏗️ Project Structure
+**🏗️ Project Structure**
 RAGPipeline/
 │── rag_pipeline.py      # Main pipeline implementation
 │── README.md            # Documentation (this file)
 │── requirements.txt     # Dependencies
 │── data/                # Folder for your text documents
 
-📦 Installation
+**📦 Installation**
 
 Clone this repo (or copy the rag_pipeline.py file).
 
@@ -50,8 +50,8 @@ pip install langchain langchain-community faiss-cpu sentence-transformers transf
 
 Use faiss-gpu if you want GPU acceleration.
 
-🚀 Usage
-1. Import & Initialize
+**🚀 Usage**
+**1. Import & Initialize**
 from rag_pipeline import RAGPipeline
 
 rag = RAGPipeline(data_paths=[
@@ -59,14 +59,14 @@ rag = RAGPipeline(data_paths=[
     "data/comp.graphics.txt"
 ])
 
-2. Search for Relevant Documents
+**2. Search for Relevant Documents**
 docs = rag.search_docs("What does this dataset say about religion?")
 
 3. Ask Questions with RAG
 answer = rag.ask("Which document talks about financial performance?")
 print("Answer:", answer)
 
-⚙️ Parameters
+**⚙️ Parameters**
 
 When initializing RAGPipeline, you can configure:
 
@@ -91,7 +91,7 @@ Queries are matched against the index to retrieve top relevant chunks.
 
 The HuggingFace LLM generates an answer using the retrieved context.
 
-📚 Example Output
+**📚 Example Output**
 Loaded alt.atheism.txt (20394 chars)
 Loaded comp.graphics.txt (17821 chars)
 Total documents loaded: 2
@@ -101,8 +101,8 @@ Preview:
    [first 500 characters of the most relevant chunk...]
 Answer: The document about financial performance is found in comp.graphics.txt.
 
-🔮 Future Improvements
-
+**🔮 Future Improvements
+**
 Support PDF, Word, and HTML file ingestion (via langchain.document_loaders).
 
 Add persistence (save and reload FAISS index).
@@ -110,7 +110,3 @@ Add persistence (save and reload FAISS index).
 Swap HuggingFace LLM with OpenAI or Llama.
 
 
-
-MIT License – free to use and modify.
-
-👉 Do you want me to also include a requirements.txt file and example usage script so someone can just clone and run it immediately?
